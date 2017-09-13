@@ -48,13 +48,13 @@ public class Vector2 {
         }
         if (obj instanceof Vector2) {
             Vector2 tmp = (Vector2) obj;
-            return x == tmp.x && y == tmp.y;
+            return Float.compare(x, tmp.x) == 0 && Float.compare(y, tmp.y) == 0;
         }
         return false;
     }
 
     @Override
     public String toString() {
-        return "(" + x + "," + y + ")";
+        return String.format("(%f,%f)", x, y);
     }
 }
