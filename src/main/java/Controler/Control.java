@@ -2,15 +2,15 @@ package Controler;
 
 import java.util.Queue;
 
-public abstract class AutoPilotControl<T> {
+public abstract class Control<T> {
     private Queue<T> mTargetStates;
     private T mCurState;
 
-    public AutoPilotControl(T curState) {
+    public Control(T curState) {
         mCurState = curState;
     }
 
-    public final AutoPilotControl addTargetState(T state) {
+    public final Control addTargetState(T state) {
         mTargetStates.add(state);
         return this;
     }

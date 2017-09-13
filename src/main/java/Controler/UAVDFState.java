@@ -2,16 +2,16 @@ package Controler;
 
 import math.Vector2;
 
-public  class State {
+public  class UAVDFState {
     private Vector2 mPosition = new Vector2(0,0);
     private Vector2 mDirection = new Vector2(0,0);
 
-    public State(Vector2 position, Vector2 direction) {
+    public UAVDFState(Vector2 position, Vector2 direction) {
         setPosition(position);
         setDirection(direction);
     }
 
-    public State(Vector2 position) {
+    public UAVDFState(Vector2 position) {
         this(position, new Vector2(0, 0));
     }
 
@@ -46,8 +46,8 @@ public  class State {
         if (obj == this) {
             return true;
         }
-        if (obj instanceof State) {
-            State tmp = (State) obj;
+        if (obj instanceof UAVDFState) {
+            UAVDFState tmp = (UAVDFState) obj;
             if (!tmp.getDirection().isZero()) {
                 return mPosition.equals(tmp.getPosition()) && mDirection.equals(tmp.getDirection());
             }

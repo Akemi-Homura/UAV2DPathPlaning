@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class StateTest {
+public class UAVDFStateTest {
 
     private Vector2 mPos1;
     private Vector2 mDir1;
@@ -16,10 +16,10 @@ public class StateTest {
     private Vector2 mPos_cpy2;
     private Vector2 mDir1_cpy1;
     private Vector2 mDir2_cpy2;
-    private State mSt1;
-    private State mSt2;
-    private State mSt3;
-    private State mSt4;
+    private UAVDFState mSt1;
+    private UAVDFState mSt2;
+    private UAVDFState mSt3;
+    private UAVDFState mSt4;
 
     @Before
     public void setUp() {
@@ -31,10 +31,10 @@ public class StateTest {
         mPos_cpy2 = mPos2.cpy();
         mDir1_cpy1 = mDir1.cpy();
         mDir2_cpy2 = mDir2.cpy();
-        mSt1 = new State(mPos1, mDir1);
-        mSt2 = new State(mPos2, mDir2);
-        mSt3 = new State(mPos1);
-        mSt4 = new State(mPos2);
+        mSt1 = new UAVDFState(mPos1, mDir1);
+        mSt2 = new UAVDFState(mPos2, mDir2);
+        mSt3 = new UAVDFState(mPos1);
+        mSt4 = new UAVDFState(mPos2);
     }
 
     @Test
