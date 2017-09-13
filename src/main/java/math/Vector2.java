@@ -41,6 +41,10 @@ public class Vector2 {
         return tmp.x * y - x * tmp.y;
     }
 
+    public boolean isZero() {
+        return Float.compare(0f, x) == 0 && Float.compare(0f, y) == 0;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj == this) {

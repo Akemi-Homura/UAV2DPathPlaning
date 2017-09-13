@@ -39,7 +39,7 @@ public class Vector2Test {
     public void cpy() throws Exception {
         Vector2 v = mV1.cpy();
         assertEquals(v, mV1);
-        assertEquals(v, mV1);
+        assertEquals(v, new Vector2(2f, 1f));
     }
 
     @Test
@@ -89,6 +89,13 @@ public class Vector2Test {
         Object o1 = new String("(2f,1f)");
         assertEquals(mV1, o);
         assertNotEquals(mV1, o1);
+    }
+
+    @Test
+    public void isZero() throws Exception {
+        Vector2 t = new Vector2(0f, 0f);
+        assertTrue(t.isZero());
+        assertTrue(!mV1.isZero());
     }
 
     @Test
